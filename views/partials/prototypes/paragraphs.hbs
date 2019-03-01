@@ -1,0 +1,20 @@
+<div id="what-to-do" class="{{ class  }} paragraphs">
+  <div class="section-wrapper drop-shadow">
+    <div class="whole">
+      <h3 class="section-headline">{{ prototype.copy.nextSteps.headline }}</h3>
+      <h5 class="wtd-subhead">{{{ prototype.copy.nextSteps.subhead }}}.</h5>
+    </div>
+      {{#each prototype.copy.nextSteps.steps}}
+        <div class="half">
+          <div class="num-icon">
+            {{> what_to_do_svg number=(breachMath @index "+" 1)}}
+          </div>
+          <div class="wrap-col">
+            <p class="medium">{{ headline }}</p>
+            <p>{{ body }}</p>
+          </div>
+        </div>
+      {{/each}}
+    {{!-- {{/if}} --}}
+  </div>
+</div>

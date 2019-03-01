@@ -5,7 +5,7 @@
         {{#if featuredBreach }}
           {{{fluentNestedBold req.supportedLocales "fb-landing-headline" breachName=featuredBreach.Title}}}
         {{else}}
-          {{fluentFormat req.supportedLocales "landing-headline"}}
+          {{ prototype.copy.landing.headline }}
         {{/if}}
       </h2>
       {{#if featuredBreach }}
@@ -20,7 +20,7 @@
         {{/if}}
       {{else}}
         <p class="landing-blurb">
-          {{fluentFormat req.supportedLocales "fxa-landing-blurb"}}
+          {{ prototype.copy.landing.subhead }}
         </p>
       {{/if}}
     </div>

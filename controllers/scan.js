@@ -1,6 +1,7 @@
 "use strict";
 
 const crypto = require("crypto");
+const { handlePrototypes } = require("../handle-prototypes");
 
 const AppConstants = require("../app-constants");
 const { FluentError } = require("../locale-utils");
@@ -46,8 +47,9 @@ function _validatePageToken(pageToken, req) {
 async function post (req, res) {
   const emailHash = req.body.emailHash;
   const encryptedPageToken = req.body.pageToken;
-  let validPageToken = false;
+  const prototype = handlePrototypes.getPrototype(req.body.prototype);
 
+  let validPageToken = false;
   // for #688: use a page token to check that scans come from real pages
   if (AppConstants.PAGE_TOKEN_TIMER > 0) {
     if (!encryptedPageToken) {
@@ -67,6 +69,8 @@ async function post (req, res) {
 
   const scanRes = await scanResult(req);
 
+  // send prototype ID # and copy to template.
+  scanRes.prototype = prototype;
   const formTokens = {
     pageToken: encryptedPageToken,
     csrfToken: req.csrfToken(),

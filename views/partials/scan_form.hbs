@@ -6,6 +6,7 @@
     <span id="invalid-email-message" class="error-message">{{fluentFormat req.supportedLocales "scan-error"}}</span>
   </div>
   <input type="hidden" name="emailHash" />
+  <input type="hidden" name="prototype" value={{ prototype.id }} />
   {{#if scanFeaturedBreach}}
     <input id="featured" type="hidden" name="featuredBreach" value="{{ featuredBreach.Name }}"/>
   {{/if}}

@@ -3,9 +3,11 @@
 const AppConstants = require("../app-constants");
 const scanResult = require("../scan-results");
 const { generatePageToken } = require("./utils");
-
+const { handlePrototypes } = require("../handle-prototypes");
 
 async function home(req, res) {
+
+  const prototype = handlePrototypes.getPrototype(req.query.prototype);
 
   const formTokens = {
     pageToken: AppConstants.PAGE_TOKEN_TIMER > 0 ? generatePageToken(req) : "",
@@ -41,6 +43,7 @@ async function home(req, res) {
     scanFeaturedBreach,
     pageToken: formTokens.pageToken,
     csrfToken: formTokens.csrfToken,
+    prototype: prototype,
   });
 }
 
