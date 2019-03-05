@@ -1,0 +1,353 @@
+.tdl-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var(--gap);
+  padding-left: calc(var(--columnSpacing) / 2);
+  padding-right: calc(var(--columnSpacing) / 2);
+  padding-bottom: calc(var(--columnSpacing) / 4);
+  padding-top: calc(var(--columnSpacing) / 4);
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(10, 132, 255, 0), 0 0 0 4px rgba(10, 132, 255, 0);
+  border: 1px solid #2e9afd33;
+  cursor: pointer;
+}
+
+.tdl-item.highlight,
+.tdl-item:hover {
+  border: 1px solid #2e9afda8;
+  background-color: #312f5e0a;
+}
+
+.tdl-item.active,
+.tdl-item.highlight {
+  box-shadow: 0 0 0 1px rgba(10, 132, 255, 0.5), 0 0 0 4px rgba(10, 132, 255, 0.2);
+}
+
+.tdl-item:hover {
+  box-shadow: 0 0 0 1px rgba(10, 132, 255, 0), 0 0 0 4px rgba(10, 132, 255, 0.1);
+}
+
+.tdl-item.active {
+  border: 1px solid #2e9afda8;
+  background-image:
+    linear-gradient(
+      337deg,
+      rgba(0, 0, 0, 0),
+      rgba(148, 206, 255, 0.02) 90%
+    );
+}
+
+/* Show hidden child element when active */
+
+.tdl-item .tdl-child {
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 0;
+  pointer-events: none;
+}
+
+.tdl-item.active .tdl-child {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+
+.tdl-headline-wrapper,
+.tdl-child {
+  width: 77%;
+  padding-left: calc(var(--columnSpacing) / 2);
+  padding-right: calc(var(--columnSpacing) / 2);
+  padding-right: 0;
+  margin: auto;
+}
+
+.tdl-child {
+  line-height: 1.7;
+  padding-left: calc(var(--columnSpacing) / 1.5);
+  padding-right: calc(var(--columnSpacing) / 1.5);
+}
+
+/* Style child elements */
+
+.tdl-child p {
+  font-weight: 300;
+  font-size: 16px;
+  padding-right: calc(var(--gap) / 2);
+}
+
+/* Move item headline down when active */
+
+.wtd-num-wrapper,
+.tdl-item h4.tdl-headline {
+  transform: translateY(0);
+  transition: all 0.325s ease;
+}
+
+.tdl-item.active .wtd-num-wrapper,
+.tdl-item.active h4.tdl-headline {
+  transform: translateY(10px);
+  transition: all 0.325s ease;
+}
+
+.tdl-headline-wrapper {
+  position: relative;
+  opacity: 0.8;
+}
+
+.tdl-headline-wrapper,
+h4.tdl-headline {
+  flex-direction: row;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.tdl-caret-headline-wrapper {
+  position: relative;
+}
+
+h4.tdl-headline {
+  padding-left: calc(var(--gap) / 2);
+  padding-right: calc(var(--gap) * 2);
+  font-weight: 500;
+  font-size: 18px;
+  min-height: 50px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Prevent mouse events from firing off wrong elements */
+.tdl-item > *,
+.tdl-item h4 {
+  pointer-events: none;
+}
+
+/* List item button */
+
+.tdl-item button {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #2e9afd4a;
+  margin-top: 20px;
+  font-size: 14px;
+  max-height: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.clicked-check button {
+  background: rgba(105, 171, 255, 0.05);
+  pointer-events: none;
+}
+
+span.marked-as-done,
+span.mark-as-done {
+  width: 100%;
+  right: 0;
+  left: 0;
+  position: absolute;
+  padding-bottom: 3px;
+}
+
+.tdl-item button svg.check-mark {
+  position: relative;
+}
+
+.clicked-check span.checkmark-spacing {
+  padding-right: 20px;
+}
+
+span.mark-as-done {
+  opacity: 1;
+}
+
+.tdl-item.clicked-check span.mark-as-done,
+.tdl-item span.marked-as-done {
+  opacity: 0;
+}
+
+.tdl-item button span {
+  pointer-events: none;
+}
+
+.tdl-item button:hover {
+  background: rgba(255, 255, 255, 0.03);
+  outline: none;
+  border: 1px solid #2e9afd21;
+}
+
+.tdl-item button:active,
+.tdl-item button:focus {
+  background: #0027560a;
+}
+
+button .check-mark {
+  padding-bottom: 0;
+}
+
+.active button {
+  pointer-events: all;
+}
+
+/* Caret */
+
+svg.tdl-caret {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transform: rotate(0deg);
+}
+
+/* CheckMarks */
+
+.check-mark {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-bottom: 3px;
+  right: 10px;
+  width: 15px;
+}
+
+/* .checked styling */
+
+.tdl-item.inactive.checked .tdl-headline-wrapper {
+  opacity: 0.6;
+}
+
+.checked .check-mark,
+.clicked-check button .check-mark,
+.tdl-item.active.clicked-check span.marked-as-done,
+.tdl-item.active .tdl-headline-wrapper,
+.tdl-item.highlight .tdl-headline-wrapper,
+.tdl-item.inactive:hover .tdl-headline-wrapper,
+.tdl-item.inactive.checked:hover .tdl-headline-wrapper {
+  opacity: 1;
+}
+
+/*
+.tdl-item.inactive .tdl-child {
+  transition: all 0.6s ease;
+} */
+
+.tdl-item.inactive .wtd-num-wrapper,
+.tdl-item.active .wtd-num-wrapper,
+.tdl-item:hover,
+.tdl-item.inactive .tdl-headline-wrapper h4,
+.tdl-item.active .tdl-headline-wrapper h4,
+.tdl-item.inactive .tdl-headline-wrapper,
+.tdl-item.active .tdl-headline-wrapper,
+.tdl-item.inactive,
+.tdl-item.active,
+.tdl-item.inactive .tdl-child,
+.tdl-item.active .tdl-child,
+.tdl-caret.inactive,
+.tdl-item.active .tdl-caret {
+  transition: all 0.325s ease;
+}
+
+.tdl-item span.mark-as-done,
+.tdl-item.clicked-checked span.mark-as-done,
+.tdl-item span.marked-as-done,
+.tdl-item.clicked-checked span.marked-as-done {
+  transition: all 0.1s ease;
+}
+
+.check-mark,
+.checked .check-mark,
+.checkmark-spacing,
+.clicked-check .checkmark-spacing,
+.tdl-caret,
+.tdl-item.active .tdl-caret {
+  transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 755) {
+  h4.tdl-headline {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  h4.tdl-headline {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  svg.tdl-caret {
+    width: 16px;
+    max-width: 16px;
+    height: 16px;
+  }
+
+  .tdl-headline-wrapper,
+  .tdl-child {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h4.tdl-headline {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 14px;
+  }
+
+  svg.check-mark {
+    right: 8px;
+    top: 8px;
+    bottom: auto;
+  }
+
+  svg.tdl-caret {
+    display: none;
+  }
+
+  .tdl-item {
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .tdl-headline-wrapper,
+  .tdl-child {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tdl-headline {
+    margin-left: 10px;
+  }
+
+  .tdl-item.active .tdl-child {
+    max-height: 600px;
+  }
+
+  .tdl-child p {
+    padding-right: 0;
+    font-size: 15px;
+  }
+
+  .wtd-num-wrapper {
+    left: 0;
+    position: relative;
+  }
+
+  .tdl-caret-headline-wrapper {
+    position: initial;
+  }
+}

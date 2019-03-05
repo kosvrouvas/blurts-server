@@ -43,7 +43,7 @@ const prototypeCopy = {
     },
     "nextSteps" : {
       "headline": "Was your info in a data breach?",
-      "subhead": "What to do next",
+      "subhead": "Here's what to do next",
       "steps": [
         {
           "headline": "Change your passwords, even for old accounts.",
@@ -105,7 +105,7 @@ const prototypeCopy = {
     },
     "nextSteps" : {
       "headline": "Was your info in a data breach?",
-      "subhead": "Protect your online accounts",
+      "subhead": "4 simple steps to protect your online accounts.",
       "steps": [
         {
           "headline": "Change compromised passwords for any website breaches.",
@@ -137,7 +137,6 @@ const prototypeCopy = {
     },
     "passwordTips": {
       "headline": "Hackers can do a lot of damage in little time with a stolen password.",
-      "subhead": "Here’s how to protect yourself.",
       "blurb": "Data breaches are on the rise. The next big breach can happen anytime. Will you be ready? Take these steps to reduce your risk.",
       "tips": [
         { // 1

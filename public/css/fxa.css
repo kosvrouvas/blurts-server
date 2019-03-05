@@ -65,6 +65,10 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .section-headline {
   line-height: 1.3;
   font-size: 1.9375rem;
@@ -1300,8 +1304,14 @@ span.breach-info .medium {
   justify-content: flex-start;
 }
 
+#what-to-do .half p {
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 #what-to-do .half p.medium {
   margin-bottom: calc(var(--gap) / 4);
+  font-weight: 600;
 }
 
 #what-to-do .section-headline {
@@ -1309,8 +1319,101 @@ span.breach-info .medium {
   margin-bottom: var(--gap);
 }
 
-#what-to-do .section-wrapper > * {
+.section-subhead {
+  font-weight: 400;
+  margin-bottom: var(--gap);
+  cursor: pointer;
+}
+
+/* PARAGRAPH FORMAT */
+
+#what-to-do.paragraphs {
+  margin-top: var(--columnSpacing);
+}
+
+#what-to-do.paragraphs h3.section-headline {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#what-to-do.paragraphs .whole {
+  flex-direction: column;
+}
+
+#what-to-do.paragraphs .wtd-subhead {
   max-width: 600px;
+  margin-top: calc(var(--gap) / 2);
+  margin-bottom: var(--gap);
+  font-size: 1.45rem;
+  letter-spacing: -0.1px;
+  display: block !important;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+#password-advice .pwt-subhead {
+  font-weight: 600 !important;
+  margin-top: 10px !important;
+}
+
+p.pwt-blurb {
+  margin-top: 0 !important;
+}
+
+#password-advice .section-headline {
+  max-width: 700px;
+}
+
+#password-advice p.pwt-blurb,
+#password-advice .section-headline {
+  max-width: 750px;
+}
+
+.wtd-tdl-wrapper {
+  width: 100%;
+}
+
+.wtd-tdl-wrapper h3.section-headline {
+  margin-bottom: 0;
+}
+
+.wtd-tdl-wrapper h4.section-subhead {
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.tdl-item.active .tdl-caret {
+  transform: rotate(180deg);
+}
+
+ul.wtd-tips {
+  max-width: 700px;
+  flex-direction: column;
+}
+
+.wtd-num-wrapper {
+  position: absolute;
+  left: -10px;
+  flex-direction: row;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+svg.wtd-num {
+  width: 30px;
+}
+
+.wtd-num circle {
+  stroke-width: 1.5px;
+}
+
+.wtd-num text {
+  font-family: sans-serif;
+}
+
+ul.wtd-tips li svg.tdl-caret path {
+  fill: #58aeff;
 }
 
 .num-icon {

@@ -1,27 +1,24 @@
-<div id="what-to-do" class="{{ class  }} v3 one-column">
+<div class="{{ class  }} v3 one-column">
   <div class="section-wrapper drop-shadow">
-      <div class="wtd-ac-wrapper">
-        <div class="whole">
-          <span class="section-headline">{{{ prototype.copy.nextSteps.headline }}}
-            <span class="section-subhead">{{{ prototype.copy.nextSteps.subhead }}}.
-              {{!-- <span class="arrow-symbol">&#xbb;</span> --}}
-            </span>
-          </span>
+      <div class="wtd-tdl-wrapper">
+        <div class="whole col">
+          <h3 class="section-headline">{{{ prototype.copy.nextSteps.headline }}}</h3>
+          <h4 class="section-subhead">{{{ prototype.copy.nextSteps.subhead }}}</h4>
         </div>
-        <ul class="whole checkbox-cluster accordian toggle-down-list">
+        <ul id="wtd-tips" class="whole wtd-tips toggle-down-list">
           {{#each prototype.copy.nextSteps.steps }}
-            <li class="ac-item">
-              <div class="ac-caret-headline-wrapper">
+            <li class="tdl-item">
+              <div class="tdl-caret-headline-wrapper">
                 {{> caret}}
                 {{> checkbox-check }}
-                <div class="ac-headline-wrapper">
+                <div class="tdl-headline-wrapper">
                   <div class="wtd-num-wrapper">
                     {{> what_to_do_svg number=(breachMath @index "+" 1)}}
                   </div>
-                  <h4 class="ac-headline">{{{ headline }}}</h4>
+                  <h4 class="tdl-headline">{{{ headline }}}</h4>
                 </div>
               </div>
-              <div class="ac-child">
+              <div class="tdl-child">
                 <p>{{ body }}</p>
                 <button class="check-done">
                   <span class="mark-as-done">Mark as Done</span>
