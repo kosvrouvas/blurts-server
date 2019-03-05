@@ -1411,6 +1411,7 @@ svg.wtd-num {
 
 .wtd-num text {
   font-family: sans-serif;
+  -webkit-user-select: none;
 }
 
 ul.wtd-tips li svg.tdl-caret path {
