@@ -1363,6 +1363,7 @@ p.pwt-blurb {
 
 #password-advice .section-headline {
   max-width: 700px;
+  margin-bottom: calc(var(--gap) / 2);
 }
 
 #password-advice p.pwt-blurb,

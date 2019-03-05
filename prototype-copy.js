@@ -12,7 +12,6 @@ const prototypeCopy = {
     },
     "passwordTips": {
       "headline": "Stronger Passwords = Better Protection",
-      "subhead": "Your private information is only as safe as your passwords.",
       "blurb": "Your passwords protect more than your accounts. They protect every bit of personal information that resides in them. Here’s how to better protect your private and personal information.",
       "tips" :[
         { // 1
