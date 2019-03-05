@@ -4,8 +4,10 @@ const { prototypeCopy } = require("./prototype-copy");
 
 const handlePrototypes = {
 
- getPrototype: (prototypeNumber = 1) => {
-
+ getPrototype: (prototypeNumber) => {
+   if (prototypeNumber === "") {
+     prototypeNumber = 1;
+   }
     const prototype = {
       id: prototypeNumber,
       checklistFormat: false,
