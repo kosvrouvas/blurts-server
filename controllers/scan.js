@@ -47,6 +47,11 @@ function _validatePageToken(pageToken, req) {
 async function post (req, res) {
   const emailHash = req.body.emailHash;
   const encryptedPageToken = req.body.pageToken;
+
+  if (!emailHash || emailHash === sha1("")) {
+    return res.redirect("/");
+  }
+
   const prototype = handlePrototypes.getPrototype(req.body.prototype);
 
   let validPageToken = false;
@@ -61,10 +66,6 @@ async function post (req, res) {
     if (!validPageToken) {
       throw new FluentError("error-scan-page-token");
     }
-  }
-
-  if (!emailHash || emailHash === sha1("")) {
-    return res.redirect("/");
   }
 
   const scanRes = await scanResult(req);
