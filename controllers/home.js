@@ -6,11 +6,11 @@ const { generatePageToken } = require("./utils");
 const { handlePrototypes } = require("../handle-prototypes");
 
 async function home(req, res) {
-  let prototypeNumber = 1;
+  let prototype = "";
   if (req.query.prototype) {
-    prototypeNumber = req.query.prototype;
+    prototype = req.query.prototype;
   }
-  const prototype = handlePrototypes.getPrototype(prototypeNumber);
+  prototype = handlePrototypes.getPrototype(prototype);
 
   const formTokens = {
     pageToken: AppConstants.PAGE_TOKEN_TIMER > 0 ? generatePageToken(req) : "",
