@@ -8,6 +8,10 @@ const toggleActiveStatus = (event) => {
     el.classList.toggle(className);
   });
 
+  if (el.classList.contains("checked") && !el.classList.contains("clicked-check")) {
+    el.classList.remove("checked");
+  }
+
   if (el.classList.contains("clicked-check")) {
     setTimeout(() => {
       el.classList.add("checked");
@@ -25,7 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.add("inactive");
       item.addEventListener("click", toggleActiveStatus);
       item.querySelector("button").addEventListener("click", () => {
-        item.classList.add("clicked-check");
+        item.classList.toggle("clicked-check");
+        if (!item.classList.contains("clicked-check")) {
+          return item.classList.remove("checked");
+        }
         setTimeout(() => {
           toggleActiveStatus(item);
         }, 500);
