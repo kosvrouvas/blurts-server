@@ -147,7 +147,7 @@ const prototypeCopy = {
           "subhead": "The shorter, more obvious your password is (p@ssw0rd, anyone?), the easier it is to guess your login. Hackers run scripts of commonly used passwords to get in to accounts.  ",
         },
         { // 3
-          "headline": "Don’t expert security questions to be all that secure. ",
+          "headline": "Don’t expect security questions to be all that secure. ",
           "subhead": "Many websites ask the same security questions. When you give the same answers over and over, you become easy prey. Make your answers unexpected and unique, just like your passwords.",
         },
         { // 4
@@ -160,7 +160,7 @@ const prototypeCopy = {
         },
         { // 6
           "headline": "Sign up for Firefox Monitor alerts. Get ready to act.",
-          "subhead": "Cyber crime is a lucrative business. If your info gets out there, you’ll be ready to act fast so you can protect your data from being sold. Sign up for Firefox Monitor alerts to find out about new breaches.",
+          "subhead": "Cyber crime is a lucrative business. If your info gets out there, you need to be ready to act fast to protect your data if it gets sold. Sign up for Firefox Monitor alerts to find out about new breaches.",
         },
       ],
     },
