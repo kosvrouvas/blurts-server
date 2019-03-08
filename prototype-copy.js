@@ -41,24 +41,24 @@ const prototypeCopy = {
       ],
     },
     "nextSteps" : {
-      "headline": "Was your info in a data breach?",
-      "subhead": "Here's what to do next",
+      "headline": "What to do when your information is exposed in a data breach.",
+      "subhead": "Take these steps to protect yourself.",
       "steps": [
         {
-          "headline": "Change your passwords, even for old accounts.",
-          "body": "If you can’t log in, contact the website to ask how to update it. See an account you don’t recognize? Your data could have been sold or redistributed. This could also be an account you forgot you created or a company that changed names.",
+          "headline": "Change your passwords on any compromised websites.",
+          "body": "If you have an account on the site, change your password. Don’t recognize the name? Your data could have been sold or redistributed. This could also be an account you forgot you created or a company that changed names.",
         },
         {
-          "headline": "Stop using the exposed password, and change it everywhere you’ve used it.",
-          "body": "Hackers may try to use that same password and your email to get in to other accounts. Create a different and unique password for every account, especially for your bank account, email, and other websites where you save personal information.",
+          "headline": "If you reuse an exposed password, change it.",
+          "body": "Think about where else you have used an exposed password. Start with your bank, email, or other websites where you save personal info. Update those passwords and move onto other sites, creating a unique password for every online account.",
         },
         {
-          "headline": "Take extra steps to secure your financial accounts.",
-          "body": "Most breaches only expose emails and passwords, but some do include sensitive financial information. If your bank account or credit card numbers were exposed, alert your bank to possible fraud. Monitor statements for charges you don’t recognize.",
+          "headline": "Was financial data exposed? Take a few extra steps.",
+          "body": "If your bank account or credit card numbers were exposed in a breach, watch your statements for charges you don’t recognize. Alert your bank about anything suspicious. Consider signing up for a credit monitoring service.",
         },
         {
-          "headline": "Get help remembering all your passwords and keeping them safe.",
-          "body": "Password managers like 1Password, LastPass, Dashlane, and Bitwarden store your passwords securely and fill them into websites for you. Use a password manager on your phone and computer so you don’t have to remember them all.",
+          "headline": "Keep all your logins safe with a password manager.",
+          "body": "Password managers encrypt and store your logins securely. They also work across all your devices to fill your password into websites and apps. Security experts recommend 1Password, LastPass, Dashlane, and Bitwarden.",
         },
       ],
     },
@@ -90,7 +90,7 @@ const prototypeCopy = {
         },
         { // 4
           "headline": "To keep all your logins private, use a password manager.",
-          "subhead": "Never click a forgot password? link again. Password managers are a safe, secure, and convenient way to manage your logins. They encrypt your passwords to keep them truly private.",
+          "subhead": "Never click a “forgot password?” link again. Password managers are a safe, secure, and convenient way to manage your logins. They encrypt your passwords to keep them truly private.",
         },
         { // 5
           "headline": "Add another layer of security. Turn on 2FA.",
@@ -103,12 +103,12 @@ const prototypeCopy = {
       ],
     },
     "nextSteps" : {
-      "headline": "Was your info in a data breach?",
+      "headline": "What to do when your information is exposed in a data breach.",
       "subhead": "4 simple steps to protect your online accounts.",
       "steps": [
         {
           "headline": "Change compromised passwords for any website breaches.",
-          "body": "If you can’t log in, contact the website to ask how to update it. See an account you don’t recognize? Your data could have been sold or redistributed. This could also be an account you forgot you created or a company that changed names.",
+          "body": "Step one is changing your passwords. It’s like changing the locks to prevent anyone who has the old keys from letting themselves in. Don’t recognize the name of a breach? This could be a company that bought your data or compiled it from public sources.",
         },
         {
           "headline": "Don’t repeat, reuse, or recycle passwords. Make every one unique.",
@@ -135,7 +135,7 @@ const prototypeCopy = {
       "subhead": "Get alerts if your email appears in a new data breach. We’ll also send your full report of breaches back to 2007 so you know which passwords you need to change.",
     },
     "passwordTips": {
-      "headline": "Hackers can do a lot of damage in little time with a stolen password.",
+      "headline": "Hackers can do a lot of damage in little time with a stolen password. Here's how to protect yourself.",
       "blurb": "Data breaches are on the rise. The next big breach can happen anytime. Will you be ready? Take these steps to reduce your risk.",
       "tips": [
         { // 1
@@ -174,7 +174,7 @@ const prototypeCopy = {
         },
         {
           "headline": "Stop reusing passwords. You leave the door wide open for hackers.",
-          "body": "If a data breach exposes that one password you use everywhere, now all your accounts are at risk. Hackers could get into any of them.That is why every account should have a unique password.",
+          "body": "If a data breach exposes that one password you use everywhere, now all your accounts are at risk. Hackers could get into any of them. That is why every account should have a unique password.",
         },
         {
           "headline": "Don’t let identity theft go unnoticed. Take precautions if financial data was exposed.",
@@ -182,7 +182,7 @@ const prototypeCopy = {
         },
         {
           "headline": "Use a password manager to save and store logins. Keep cyber criminals out.",
-          "body": "Software that generates strong passwords and encrypts them is safer than reusing logins. Password managers like 1Password, LastPass, Dashlane, and Bitwarden the safest, most secure options. ",
+          "body": "Software that generates strong passwords and encrypts them is safer than reusing logins. Password managers like 1Password, LastPass, Dashlane, and Bitwarden are the safest, most secure options.",
         },
       ],
     },
