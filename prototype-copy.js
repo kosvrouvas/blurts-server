@@ -165,8 +165,8 @@ const prototypeCopy = {
       ],
     },
     "nextSteps" : {
-      "headline": "Was your info in a data breach?",
-      "subhead": "Act fast to minimize the damage",
+      "headline": "What to do when your information is exposed in a data breach.",
+      "subhead": "Act fast to minimize the damage with these 4 steps.",
       "steps": [
         {
           "headline": "Change passwords exposed in website breaches. Never use exposed passwords again.",
