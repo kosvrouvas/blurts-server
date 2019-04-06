@@ -15,13 +15,23 @@ const toggleActiveStatus = (event) => {
   if (el.classList.contains("clicked-check")) {
     setTimeout(() => {
       el.classList.add("checked");
+      const activeTips = document.querySelectorAll("li.active");
+      if (activeTips.length === 0) {
+        const allTips = document.querySelectorAll("li.inactive");
+        for (const tip of allTips) {
+          if (!tip.classList.contains("checked")) {
+            tip.classList.add("active");
+            tip.classList.remove("inactive");
+            return;
+          }
+        }
+      }
     }, 600);
   }
 };
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const listsWithToggledItems = document.querySelectorAll(".toggle-down-list");
   listsWithToggledItems.forEach(list => {
     const listItems = list.querySelectorAll("li");
