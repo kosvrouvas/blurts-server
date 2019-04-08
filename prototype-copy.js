@@ -180,7 +180,7 @@ const prototypeCopy = {
         },
         {
           "headline": "Don’t let identity theft go unnoticed. Take precautions if financial data was exposed.",
-          "body": "Breaches exposing bank accounts or credit cards are especially dangerous. Cyber criminals can run up charges in your name. So monitor statements, and alert your bank if you see anything strange.Monitor statements, and alert your bank if you see anything strange. Consider signing up for a credit monitoring service. Breaches exposing bank accounts or credit cards are especially dangerous. Cyber criminals can run up charges in your name.",
+          "body": "Monitor statements, and alert your bank if you see anything strange. Consider signing up for a credit monitoring service. Breaches exposing bank accounts or credit cards are especially dangerous. Cyber criminals can run up charges in your name.",
         },
         {
           "headline": "Use a password manager to save and store logins. Keep cyber criminals out.",
