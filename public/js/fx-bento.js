@@ -127,9 +127,11 @@ class FirefoxApps extends HTMLElement {
       document.removeEventListener("keydown", this);
       this.metricsSendEvent("bento-closed", this._currentSite);
       this.toggleClass("fx-bento-fade-out"); // Set "fx-bento-fade-out" class to transition opacity smoothly since we can't transition smoothly to `display: none`.
+      this.classList.remove("bento-open");
       setTimeout(() => {
         this.toggleClass("fx-bento-fade-out");
         this.toggleClass("active");
+        this._bentoButton.blur();
       }, 500);
       return;
     };
@@ -223,6 +225,7 @@ class FirefoxApps extends HTMLElement {
       return closeBento();
     }
 
+    this.classList.add("bento-open");
     const sendEventOnBentoOpen = new Event("bento-was-opened");
     document.dispatchEvent(sendEventOnBentoOpen);
 
@@ -233,6 +236,7 @@ class FirefoxApps extends HTMLElement {
     window.addEventListener("click", this);
 
     this.toggleClass("active");
+    this._bentoButton.focus();
     return this.handleBentoFocusTrap();
   }
 
